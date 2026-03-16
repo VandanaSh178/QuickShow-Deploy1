@@ -1,141 +1,219 @@
-🎬 QuickShow – Movie Ticket Booking Platform
+# 🎬 QuickShow – Movie Ticket Booking Platform
 
-QuickShow is a full-stack movie ticket booking web application built using the MERN stack.
-Users can browse movies, view show timings, select seats, and book tickets securely with online payments.
+QuickShow is a **full-stack movie ticket booking web application** built using the **MERN stack**.  
+It allows users to browse movies, check show timings, select seats, and book tickets securely with online payments.
 
-This project demonstrates modern full-stack development, authentication, API integration, and payment processing.
+This project demonstrates **modern full-stack development, authentication, API integration, and payment processing**.
 
-🚀 Features
+---
 
-✅ Browse movies and show details
-✅ View available showtimes
-✅ Select seats and book tickets
-✅ Secure user authentication
-✅ Online payments integration
-✅ Responsive modern UI
-✅ Admin dashboard for managing shows
-✅ Booking history for users
+# 🚀 Features
 
-🛠 Tech Stack
-Frontend
+### 👤 User Features
+- 🎥 Browse movies and view movie details
+- ⏰ View available show timings
+- 💺 Select seats and book tickets
+- 💳 Secure online ticket payment
+- 📜 View booking history
+- 📱 Fully responsive user interface
 
-React
+### 🛠 Admin Features
+- ➕ Add or manage movies
+- 🎬 Manage show timings
+- 📊 Monitor bookings
 
-Tailwind CSS
+---
 
-Axios
+# 🧰 Tech Stack
 
-Backend
+### Frontend
+- React  
+- Tailwind CSS  
+- Axios  
 
-Node.js
+### Backend
+- Node.js  
+- Express.js  
 
-Express.js
+### Database
+- MongoDB  
 
-Database
+### Authentication
+- Clerk  
 
-MongoDB
+### Payment Integration
+- Stripe  
 
-Authentication
+---
 
-Clerk
+# 🏗 System Architecture
 
-Payment Integration
+```
+User (Browser)
+      |
+      v
+React Frontend
+      |
+      v
+Node.js + Express Backend
+      |
+      v
+MongoDB Database
+      |
+      v
+Stripe Payment Gateway
+```
 
-Stripe
+---
 
-📂 Project Structure
+# 📂 Project Structure
+
+```
 QuickShow-FullStack
 │
-├── client        # React frontend
+├── client
+│   ├── src
+│   ├── components
+│   ├── pages
+│   └── package.json
 │
-├── server        # Node.js backend
+├── server
+│   ├── controllers
+│   ├── routes
+│   ├── models
+│   ├── middleware
+│   └── server.js
 │
 ├── .gitignore
-├── package.json
-└── README.md
-⚙️ Installation & Setup
-1️⃣ Clone the repository
+├── README.md
+└── package.json
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/VandanaSh178/QuickShow-Deploy1.git
 cd QuickShow-FullStack
-2️⃣ Install dependencies
+```
 
-Frontend:
+---
 
+## 2️⃣ Install Dependencies
+
+### Frontend
+
+```bash
 cd client
 npm install
+```
 
-Backend:
+### Backend
 
+```bash
 cd ../server
 npm install
-3️⃣ Create Environment Variables
+```
 
-Create a .env file inside the server folder.
+---
+
+## 3️⃣ Environment Variables
+
+Create a `.env` file inside the **server** folder.
 
 Example:
 
+```
 PORT=5000
-MONGO_URI=your_mongodb_connection
-STRIPE_SECRET_KEY=your_stripe_key
-CLERK_SECRET_KEY=your_clerk_key
-JWT_SECRET=your_secret
-4️⃣ Run the application
+MONGO_URI=your_mongodb_connection_string
+STRIPE_SECRET_KEY=your_stripe_secret_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+JWT_SECRET=your_jwt_secret
+```
 
-Start backend:
+---
 
+## 4️⃣ Run the Application
+
+### Start Backend
+
+```bash
 cd server
 npm run dev
+```
 
-Start frontend:
+### Start Frontend
 
+```bash
 cd client
 npm start
-🌐 API Endpoints
-Movies
-GET /api/movies
+```
+
+Frontend will run on:
+
+```
+http://localhost:3000
+```
+
+Backend will run on:
+
+```
+http://localhost:5000
+```
+
+---
+
+# 🔌 API Endpoints
+
+### Movies
+
+```
+GET  /api/movies
 POST /api/movies
-Bookings
+```
+
+### Bookings
+
+```
 POST /api/bookings
-GET /api/bookings/user
-📸 Screenshots
+GET  /api/bookings/user
+```
 
-You can add screenshots like:
+---
 
-Home Page
 
-Movie Details
+# 🔒 Security
 
-Seat Selection
+Sensitive credentials such as API keys and database connection strings are stored in **environment variables** using `.env` files and excluded from version control using `.gitignore`.
 
-Booking Confirmation
+---
 
-Example:
+# 🚀 Future Improvements
 
-![Home Page](screenshots/home.png)
-🔒 Security
+- Real-time seat locking using Socket.IO  
+- Email ticket confirmation  
+- QR code ticket generation  
+- Admin analytics dashboard  
+- Movie recommendation system  
+- Mobile app version
 
-Environment variables are stored in .env files and excluded using .gitignore to protect sensitive data like API keys.
+---
 
-📈 Future Improvements
+# 👩‍💻 Author
 
-Real-time seat locking with Socket.IO
+**Vandana Sharma**
 
-Email ticket confirmation
+GitHub  
+https://github.com/VandanaSh178  
 
-QR code tickets
+LinkedIn  
+https://www.linkedin.com/in/vandana-sharma-2baba6205
 
-Admin analytics dashboard
+---
 
-Movie recommendation system
+# ⭐ Support
 
-👩‍💻 Author
-
-Vandana Sharma
-
-GitHub: https://github.com/VandanaSh178
-
-LinkedIn: www.linkedin.com/in/vandana-sharma-2baba6205
-
-⭐ Support
-
-If you like this project, consider starring the repository on GitHub to support the work.
+If you like this project, please consider **starring the repository ⭐** on GitHub to support the project.
